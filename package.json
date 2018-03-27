@@ -1,0 +1,40 @@
+{
+    "name": "boilerplate-babel",
+    "version": "1.0.0",
+    "description": "Babel and FlowType Boilerplate",
+    "main": "dist/index.js",
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.25.0",
+        "babel-eslint": "^7.2.3",
+        "babel-loader": "^7.1.1",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-flow": "^6.23.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "eslint": "^3.19.0",
+        "eslint-plugin-flowtype": "^2.40.1",
+        "flow-bin": "^0.68.0",
+        "nodemon": "^1.14.3"
+    },
+    "dependencies": {
+        "moment": "^2.21.0",
+        "winston": "^3.0.0-rc3"
+    },
+    "scripts": {
+        "start": "nodemon --watch src --exec babel-node src/index.js",
+        "test": "nodemon --watch src --exec babel-node src/test.js",
+        "build": "npm run lint && babel src -d dist",
+        "lint": "eslint src",
+        "serve": "node dist/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aequabit/boilerplate-babel.git"
+    },
+    "author": "aequabit",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aequabit/boilerplate-babel/issues"
+    },
+    "homepage": "https://github.com/aequabit/boilerplate-babel#readme"
+}
